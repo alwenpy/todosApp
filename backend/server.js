@@ -31,6 +31,7 @@ const REDIS_KEY = 'FULLSTACK_TASK_ARVIND';
 const MONGO_URI = 'mongodb://localhost:27017';
 const DB_NAME = 'todoApp';
 const COLLECTION_NAME = 'todos';
+const CACHE_THRESHOLD = 5;
 
 const mongoClient = new MongoClient(MONGO_URI);
 mongoClient.connect()
@@ -105,8 +106,8 @@ io.on('connection', (socket) => {
       todoList.push(item);
 
       if (todoList.length > 5) {
-        const overflowItems = todoList.slice(0, todoList.length - 5);
-        todoList = todoList.slice(-5);
+        const overflowItems = todoList.slice(0, todoList.length - CACHE_THRESHOLD);
+        todoList = todoList.slice(-CACHE_THRESHOLD);
 
         const collection = mongoClient.db(DB_NAME).collection(COLLECTION_NAME);
         await collection.insertMany(overflowItems.map(todo => ({ todo })));
