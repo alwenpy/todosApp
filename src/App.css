@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  display: flex;
+  font-family:  "Inter", sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: #f1f1f1;
+  transition: 0.2s;
+}
+h2{
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+#main{
+  width: 86svw;
+  margin: auto;
+  max-width: 400px;
+  background-color: white;
+}
+
+button{
+  background-color: #92400e;
+  outline: 0;
+  border : 0;
+  padding: 7px 15px;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 40%;
+}
+
+button:hover{
+  background-color: #b55e2d;
+}
+
+input{
+  padding-block: 0;
+  padding-inline: 0;
+  padding: 10px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: 0.2s;
+}
+input:focus{
+  border: 1px solid #92400e;
+}
+input:focus-visible{
+  border: 1px solid #92400e;
+  outline: 0;
+}
+
+
+#main{
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #92400e #f1f1f100;
+}
+
+li{
+  display: flex;
+  padding: 4px 0;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d4d7de;
+}
+p{
+  border-bottom: '1px solid #d4d7de',
+}
